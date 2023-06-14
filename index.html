@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function movingMouse(){
+            let elem = document.getElementById("myelement")
+            elem.style.color="blue"
+        }
+
+        function gettingDetails(){
+            let userdetail = prompt("Enter Your Age")
+            if(prompt!=null){
+                document.getElementById("detail").innerHTML= `<span>${userdetail}</span>`
+            }
+        }
+
+        function gettingCoordinates(){
+            var XandYCoordinates = document.getElementById("coordinates")
+            var element = XandYCoordinates.getBoundingClientRect()
+            var spanElement = document.getElementById("span1")
+            spanElement.innerText=`X: ${element.left}  -  Y:${element.top}`
+            
+
+        }
+    </script>
+    
+</head>
+<body>
+    <span id="myelement" onmouseover="movingMouse()">How are You?</span>
+    <button onclick="gettingDetails()">click</button>
+    <div id="detail"></div>
+    <h1 id="coordinates" onclick="gettingCoordinates()">To get X and Y coordinates</h1>
+    <span id="span1"></span>
+</body>
+</html>
