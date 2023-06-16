@@ -1,38 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script>
-        function movingMouse(){
-            let elem = document.getElementById("myelement")
-            elem.style.color="blue"
-        }
-
-        function gettingDetails(){
-            let userdetail = prompt("Enter Your Age")
-            if(prompt!=null){
-                document.getElementById("detail").innerHTML= `<span>${userdetail}</span>`
-            }
-        }
-
-        function gettingCoordinates(){
-            var XandYCoordinates = document.getElementById("coordinates")
-            var element = XandYCoordinates.getBoundingClientRect()
-            var spanElement = document.getElementById("span1")
-            spanElement.innerText=`X: ${element.left}  -  Y:${element.top}`
-            
-
-        }
-    </script>
-    
-</head>
-<body>
-    <span id="myelement" onmouseover="movingMouse()">How are You?</span>
-    <button onclick="gettingDetails()">click</button>
-    <div id="detail"></div>
-    <h1 id="coordinates" onclick="gettingCoordinates()">To get X and Y coordinates</h1>
-    <span id="span1"></span>
-</body>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <style>
+      .button {
+        display: inline-block;
+        background-color: aliceblue;
+        border: 1px solid black;
+        border-radius: 6px;
+        text-align: center;
+      }
+      table {
+        width: 80%;
+        margin: 20px;
+      }
+      thead {
+        background-color:bisque;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="script.js"></script>
+  </body>
 </html>
